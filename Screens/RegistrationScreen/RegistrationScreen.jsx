@@ -13,7 +13,7 @@ import {
 import { useEffect, useState } from 'react';
 import * as SVGs from '../../assets/svg/index';
 
-export const RegistrationScreen = () => {
+export const RegistrationScreen = ({ navigation }) => {
   const initialState = {
     login: '',
     email: '',
@@ -24,6 +24,7 @@ export const RegistrationScreen = () => {
   const [state, setState] = useState(initialState);
 
   useEffect(() => {
+    console.log(state);
     const keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', () => {
       setisKeyboardShown(true);
     });
@@ -93,7 +94,11 @@ export const RegistrationScreen = () => {
                     <TouchableOpacity activeOpacity={0.8} style={styles.btn} onPress={handleSubmit}>
                       <Text style={styles.btnTitle}>Зарегистрироваться</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity activeOpacity={0.8} style={styles.btnJoin}>
+                    <TouchableOpacity
+                      activeOpacity={0.8}
+                      style={styles.btnJoin}
+                      onPress={() => navigation.navigate('Login')}
+                    >
                       <Text style={styles.btnJoinTitle}>Уже есть аккаунт? Войти</Text>
                     </TouchableOpacity>
                   </>

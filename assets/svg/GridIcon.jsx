@@ -1,12 +1,12 @@
-import Svg, { Path, Rect } from "react-native-svg";
-import { globalStyles } from "../../utils/globalStyles";
+import Svg, { Path, Rect } from 'react-native-svg';
+// import { globalStyles } from '../../utils/globalStyles';
 
 const GridIcon = ({ focused }) => {
-  const color = focused ? "#FFFFFF" : "#212121";
-  const bgcBtn = focused ? "#FF6C00" : "#F6F6F6";
+  const color = focused ? '#FFFFFF' : '#212121';
+  const bgcBtn = focused ? '#FF6C00' : '#F6F6F6';
 
   return (
-    <Svg style={globalStyles.menuBtn} fill="none">
+    <Svg fill="none">
       <Rect width="70" height="40" rx="20" fill={bgcBtn} />
       <Path
         fillRule="evenodd"

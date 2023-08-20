@@ -30,7 +30,7 @@ export const styles = StyleSheet.create({
     left: 135,
   },
   registrationText: {
-    fontWeight: 500,
+    fontWeight: '500',
     fontSize: 30,
     lineHeight: 35,
     color: '#212121',

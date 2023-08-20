@@ -13,7 +13,7 @@ import {
 import { useEffect, useState } from 'react';
 // import * as SVGs from '../../assets/svg/index';
 
-export const LoginScreen = () => {
+export const LoginScreen = ({ navigation }) => {
   const initialState = {
     email: '',
     password: '',
@@ -80,7 +80,11 @@ export const LoginScreen = () => {
                     <TouchableOpacity activeOpacity={0.8} style={styles.btn} onPress={handleSubmit}>
                       <Text style={styles.btnTitle}>Войти</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity activeOpacity={0.8} style={styles.btnJoin}>
+                    <TouchableOpacity
+                      activeOpacity={0.8}
+                      style={styles.btnJoin}
+                      onPress={() => navigation.navigate('Registration')}
+                    >
                       <Text style={styles.btnJoinTitle}>Нет аккаунта? Зарегистрироваться</Text>
                     </TouchableOpacity>
                   </>

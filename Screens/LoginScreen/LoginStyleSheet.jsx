@@ -21,7 +21,7 @@ export const styles = StyleSheet.create({
     position: 'relative',
   },
   enterText: {
-    fontWeight: 500,
+    fontWeight: '500',
     fontSize: 30,
     lineHeight: 35,
     color: '#212121',
